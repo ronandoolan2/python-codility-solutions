@@ -1,3 +1,6 @@
+# you can write to stdout for debugging purposes, e.g.
+# print "this is a debug message"
+
 def most_common(X):
     maxcount = 0
     uniqX = list(set(X))
@@ -28,12 +31,9 @@ def solution(A):
             rcount -= 1
             if i+1 < lcount*2:
                 if len(A) - (i+1) < rcount*2:
-                    #print len(A) - (i+1)
                     equi_leaders += 1
-                    #print i
-                    
-    #for i in range(1, len(A)):
-    #   if check_common(A[:i], most_common_A) == True: 
-    #      if check_common(A[i:], most_common_A) == True:
-    #         equi_leaders += 1
+        else:
+            if i+1 < lcount*2:
+                if len(A) - (i+1) < rcount*2:
+                    equi_leaders += 1
     return equi_leaders
